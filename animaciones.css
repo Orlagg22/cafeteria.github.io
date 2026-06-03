@@ -1,0 +1,23 @@
+/* animaciones.css */
+
+/* Animación de fade-in */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Animación título en movimiento (ejemplo) */
+@keyframes titulo-move {
+  0% { color: #ff4c4c; text-shadow: 0 0 5px #ff0000; }
+  50% { color: #ff0000; text-shadow: 0 0 20px #ff4c4c; }
+  100% { color: #ff4c4c; text-shadow: 0 0 5px #ff0000; }
+}
+
+.titulo-animado {
+  animation: titulo-move 5s infinite alternate;
+}

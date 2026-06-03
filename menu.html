@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Menú - Café Aroma</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+  <style>
+    .box {
+      border: 2px solid #000;
+    }
+
+    .detalles {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s ease-out;
+    }
+
+    .detalles.abierto {
+      max-height: 200px;
+    }
+  </style>
+  <script>
+    function mostrarInfo(id, btn) {
+      const detalles = document.getElementById(id);
+      detalles.classList.toggle("abierto");
+
+      if (detalles.classList.contains("abierto")) {
+        btn.textContent = "Ocultar detalles";
+      } else {
+        btn.textContent = "Ver detalles";
+      }
+    }
+  </script>
+</head>
+<body>
+
+<header class="head" style="justify-content:center;">
+  <h1 style="color:#fff; font-weight:bold;">Menú de Café Aroma</h1>
+</header>
+
+<section class="content" style="max-width: 1100px; margin: 40px auto; text-align:center;">
+
+  <h2 class="title">Cafés</h2>
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fas fa-mug-hot fa-3x" style="color:#6d4c41;"></i>
+      <h3>Espresso</h3>
+      <p>Café fuerte y concentrado servido en pequeña taza.</p>
+      <button class="btn" onclick="mostrarInfo('cafe1', this)">Ver detalles</button>
+      <div id="cafe1" class="detalles">
+        <ul>
+          <li>Simple: $25</li>
+          <li>Doble: $35</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Capuchino</h3>
+      <p>Espresso con leche espumada y un toque de cacao.</p>
+      <button class="btn" onclick="mostrarInfo('cafe2', this)">Ver detalles</button>
+      <div id="cafe2" class="detalles">
+        <ul>
+          <li>Chico: $40</li>
+          <li>Grande: $55</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Latte</h3>
+      <p>Espresso con mucha leche caliente y espuma ligera.</p>
+      <button class="btn" onclick="mostrarInfo('cafe3', this)">Ver detalles</button>
+      <div id="cafe3" class="detalles">
+        <ul>
+          <li>Chico: $38</li>
+          <li>Grande: $50</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Americano</h3>
+      <p>Espresso diluido con agua caliente.</p>
+      <button class="btn" onclick="mostrarInfo('cafe4', this)">Ver detalles</button>
+      <div id="cafe4" class="detalles">
+        <ul>
+          <li>Chico: $30</li>
+          <li>Grande: $40</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Mocha</h3>
+      <p>Latte con chocolate y crema batida.</p>
+      <button class="btn" onclick="mostrarInfo('cafe5', this)">Ver detalles</button>
+      <div id="cafe5" class="detalles">
+        <ul>
+          <li>Chico: $45</li>
+          <li>Grande: $60</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Macchiato</h3>
+      <p>Espresso con una pequeña cantidad de leche espumada.</p>
+      <button class="btn" onclick="mostrarInfo('cafe6', this)">Ver detalles</button>
+      <div id="cafe6" class="detalles">
+        <ul>
+          <li>Simple: $32</li>
+          <li>Doble: $42</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-coffee fa-3x" style="color:#6d4c41;"></i>
+      <h3>Café con leche</h3>
+      <p>Café negro mezclado con leche caliente.</p>
+      <button class="btn" onclick="mostrarInfo('cafe7', this)">Ver detalles</button>
+      <div id="cafe7" class="detalles">
+        <ul>
+          <li>Chico: $35</li>
+          <li>Grande: $45</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-ice-cream fa-3x" style="color:#6d4c41;"></i>
+      <h3>Frappé</h3>
+      <p>Café frío con hielo y leche, ideal para el verano.</p>
+      <button class="btn" onclick="mostrarInfo('cafe8', this)">Ver detalles</button>
+      <div id="cafe8" class="detalles">
+        <ul>
+          <li>Chico: $45</li>
+          <li>Grande: $60</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-ice-cream fa-3x" style="color:#6d4c41;"></i>
+      <h3>Affogato</h3>
+      <p>Espresso servido sobre una bola de helado de vainilla.</p>
+      <button class="btn" onclick="mostrarInfo('cafe9', this)">Ver detalles</button>
+      <div id="cafe9" class="detalles">
+        <ul>
+          <li>Único tamaño: $50</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-seedling fa-3x" style="color:#6d4c41;"></i>
+      <h3>Café de origen único</h3>
+      <p>Café seleccionado de una región especial, con sabor único.</p>
+      <button class="btn" onclick="mostrarInfo('cafe10', this)">Ver detalles</button>
+      <div id="cafe10" class="detalles">
+        <ul>
+          <li>Chico: $50</li>
+          <li>Grande: $65</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+  <h2 class="title" style="margin-top: 50px;">Postres</h2>
+  <div class="box-container">
+
+    <div class="box">
+      <i class="fas fa-cheese fa-3x" style="color:#6d4c41;"></i>
+      <h3>Pay de manzana</h3>
+      <p>Clásico pay con manzanas frescas y canela.</p>
+      <button class="btn" onclick="mostrarInfo('postre1', this)">Ver detalles</button>
+      <div id="postre1" class="detalles">
+        <ul>
+          <li>Rebanada: $45</li>
+          <li>Entero: $260</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-cookie-bite fa-3x" style="color:#6d4c41;"></i>
+      <h3>Galletas de avena</h3>
+      <p>Galletas caseras crujientes y saludables.</p>
+      <button class="btn" onclick="mostrarInfo('postre2', this)">Ver detalles</button>
+      <div id="postre2" class="detalles">
+        <ul>
+          <li>Unidad: $15</li>
+          <li>Paquete 6: $80</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-birthday-cake fa-3x" style="color:#6d4c41;"></i>
+      <h3>Pastel de chocolate</h3>
+      <p>Pastel suave y húmedo con cobertura de chocolate.</p>
+      <button class="btn" onclick="mostrarInfo('postre3', this)">Ver detalles</button>
+      <div id="postre3" class="detalles">
+        <ul>
+          <li>Rebanada: $50</li>
+          <li>Entero: $280</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-cheese fa-3x" style="color:#6d4c41;"></i>
+      <h3>Cheesecake</h3>
+      <p>Delicado pastel de queso con base de galleta.</p>
+      <button class="btn" onclick="mostrarInfo('postre4', this)">Ver detalles</button>
+      <div id="postre4" class="detalles">
+        <ul>
+          <li>Rebanada: $55</li>
+          <li>Entero: $290</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="box">
+      <i class="fas fa-cookie fa-3x" style="color:#6d4c41;"></i>
+      <h3>Brownie</h3>
+      <p>Pastel de chocolate denso y con nueces.</p>
+      <button class="btn" onclick="mostrarInfo('postre5', this)">Ver detalles</button>
+      <div id="postre5" class="detalles">
+        <ul>
+          <li>Unidad: $30</li>
+        </ul>
+      </div>
+    </div>
+ 	
+ <div class="box">
+    <i class="fas fa-ice-cream fa-3x" style="color:#6d4c41;"></i>
+    <h3>Helado artesanal</h3>
+    <p>Helado cremoso hecho con ingredientes naturales.</p>
+    <button class="btn" onclick="mostrarInfo('postre6', this)">Ver detalles</button>
+    <div id="postre6" class="detalles">
+      <ul>
+        <li>Vaso chico: $30</li>
+        <li>Vaso grande: $45</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-candy-cane fa-3x" style="color:#6d4c41;"></i>
+    <h3>Trufas de café</h3>
+    <p>Bombones rellenos con esencia de café.</p>
+    <button class="btn" onclick="mostrarInfo('postre7', this)">Ver detalles</button>
+    <div id="postre7" class="detalles">
+      <ul>
+        <li>Caja 4 pzas: $50</li>
+        <li>Caja 8 pzas: $90</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-cookie-bite fa-3x" style="color:#6d4c41;"></i>
+    <h3>Galletas con chispas</h3>
+    <p>Galletas suaves con trozos de chocolate.</p>
+    <button class="btn" onclick="mostrarInfo('postre8', this)">Ver detalles</button>
+    <div id="postre8" class="detalles">
+      <ul>
+        <li>Unidad: $18</li>
+        <li>Paquete 6: $95</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="box">
+    <i class="fas fa-birthday-cake fa-3x" style="color:#6d4c41;"></i>
+    <h3>Pastel de zanahoria</h3>
+    <p>Bizcocho con zanahoria y cobertura de queso crema.</p>
+    <button class="btn" onclick="mostrarInfo('postre9', this)">Ver detalles</button>
+    <div id="postre9" class="detalles">
+      <ul>
+        <li>Rebanada: $48</li>
+        <li>Entero: $270</li>
+      </ul>
+    </div>
+  </div>
+
+</div>
+
+<!-- SECCIÓN HACER PEDIDO -->
+<h2 class="title" style="margin-top: 50px;">Hacer pedido</h2>
+<div class="box-container" style="justify-content: center;">
+  <div class="box" style="max-width: 600px; text-align: left;">
+    <form onsubmit="enviarPedido(event)">
+      <label for="pedido" style="display:block; margin-bottom:8px;"><strong>Tu pedido:</strong></label>
+      <textarea id="pedido" name="pedido" rows="4" style="width: 100%; margin-bottom: 15px;" placeholder="Ej. 2 Capuchinos grandes y 1 pay de manzana (rebanada)"></textarea>
+
+      <label for="direccion" style="display:block; margin-bottom:8px;"><strong>Dirección de entrega:</strong></label>
+      <input type="text" id="direccion" name="direccion" style="width: 100%; margin-bottom: 15px;" placeholder="Calle, número, colonia, ciudad" />
+
+      <button type="submit" class="btn">Enviar pedido</button>
+    </form>
+    <p id="mensajePedido" style="margin-top: 15px; font-weight: bold;"></p>
+  </div>
+</div>
+
+<script>
+  function enviarPedido(event) {
+    event.preventDefault();
+    const pedido = document.getElementById('pedido').value.trim();
+    const direccion = document.getElementById('direccion').value.trim();
+    const mensaje = document.getElementById('mensajePedido');
+
+    if (!pedido || !direccion) {
+      mensaje.textContent = "Por favor llena ambos campos para realizar el pedido.";
+      mensaje.style.color = "red";
+    } else {
+      mensaje.textContent = "¡Tu pedido ha sido recibido! En breve lo llevaremos a: " + direccion;
+      mensaje.style.color = "green";
+      document.getElementById('pedido').value = "";
+      document.getElementById('direccion').value = "";
+    }
+  }
+</script>
+
+  <a href="index.html" class="btn" style="margin-top:40px;">Volver a inicio</a>
+
+</section>
+
+</body>
+</html>
+

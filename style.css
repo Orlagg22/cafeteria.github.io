@@ -1,0 +1,128 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: #fff8f0;
+    color: #333;
+}
+
+.head {
+    background: #4e342e;
+    padding: 20px;
+    display: flex;
+    justify-content: center; /* centrado */
+    align-items: center;
+    color: #fff;
+}
+
+.logo-container {
+    background: #4e342e;
+    padding: 10px 0;
+    overflow: hidden;
+}
+
+.logo-move {
+    display: inline-block;
+    font-size: 32px;
+    font-weight: bold;
+    color: #fff;
+    white-space: nowrap;
+    animation: moveRightLeft 8s linear infinite;
+    padding-left: 100%; /* empieza fuera a la derecha */
+}
+
+/* Barra de navegación con espacios */
+.navbar {
+    display: flex;
+    gap: 30px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.header {
+    background: url('img/banner.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 100px 20px;
+    text-align: center;
+}
+
+.content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    background: #6d4c41;
+    color: #fff;
+    text-decoration: none;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #5d4037;
+}
+
+.box-container, .box-container2 {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.box {
+    background: #fff;
+    padding: 20px;
+    width: 260px;
+    border-radius: 12px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.box img {
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+}
+
+.stars i {
+    color: #ffd700;
+}
+
+.footer-section {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: #4e342e;
+    color: #fff;
+    padding: 30px 20px;
+}
+
+.f-enlaces a {
+    display: block;
+    color: #fff;
+    margin: 8px 0;
+    text-decoration: none;
+}
+
+@keyframes moveRightLeft {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
